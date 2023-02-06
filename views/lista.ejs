@@ -7,6 +7,15 @@
     <title>Lista de Tareas</title>
 </head>
 <body>
-    Funciona <%= vari %> 
+    <h1>Tu Lista de Tareas</h1>
+    <ul>
+        <% for (let i = 0; i < tareasRegistradas.length; i++) { %> 
+            <li> <%= tareasRegistradas[i] %> </li>
+        <% } %> 
+    </ul>
+    <form action="/" method="post">
+        <input type="text" name="tareaFormulario" placeholder="Escribe una nueva tarea.">
+        <button type="submit">+</button>
+    </form>
 </body>
 </html>
