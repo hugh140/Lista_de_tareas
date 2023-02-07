@@ -16,8 +16,10 @@
     </form>
     <form action="/eliminarTarea" method="post">
         <% for (let i = 0; i < tareasRegistradas.length; i++) { %> 
-            <input type="checkbox" name=<%= 'c' + i %> >
-            <label><%= tareasRegistradas[i] %></label>
+            <div class="lista-tareas">
+                <input type="checkbox" name=<%= 'c' + i %> >
+                <label><%= tareasRegistradas[i] %></label>
+            </div>
         <% } %>
         <button type="submit">Eliminar</button>
     </form>

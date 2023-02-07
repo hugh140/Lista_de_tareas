@@ -17,10 +17,17 @@ app.post('/agregarTarea', (req, res) => {
 })
 
 app.post('/eliminarTarea', (req, res) => {
+    let listaEliminar = []
+
     for (let i = 0; i < tareas.length; i++)
-        if (req.body['c'+ i] === 'on')
-            tareas.splice(i, 1)
-    console.log(tareas)
+        if (req.body['c' + i] === 'on')
+            listaEliminar.push(i)
+    
+    let numElementosEliminados = 0
+    listaEliminar.forEach(indiceEliminar => {
+        tareas.splice(indiceEliminar - numElementosEliminados, 1)
+        numElementosEliminados++
+    })
     res.redirect('/')
 })
 
