@@ -1,3 +1,66 @@
-input:checked + span {
+body {
+    background: url('https://img.freepik.com/vector-premium/matematicas-patrones-fisuras-cuadrados-ilustracion-vector-fondo-transparente-grafico_125869-1553.jpg');
+}
+input:checked + label {
     text-decoration: line-through;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    font-weight: 500;
+}
+main > div {
+    background-color: #CDF7F6;
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0px 12px 0px 0px #8FB8DE;
+    -webkit-box-shadow: 0px 12px 0px 0px #8FB8DE;
+    -moz-box-shadow: 0px 12px 0px 0px #8FB8DE;
+}
+
+#formAgregar {
+    margin-top: 20px;
+}
+#formAgregar button {
+    float:right;
+    border: none;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+#formAgregar button:hover {
+    background-color: #CACACA;
+}
+#formAgregar input {
+    width: 88%;
+    border: none;
+    border: 1px solid black;
+    border-radius: 3px;
+    padding-left: 10px;
+}
+
+.lista-tareas {
+    margin-top: 7px;
+}
+.lista-tareas input {
+    margin-right: 10px;
+}
+.lista-tareas input:checked {
+    background: black;
+}
+
+#btnEliminar {
+    margin-top: 20px;
+}
+#btnEliminar:hover {
+    background-color: #CACACA;
+}
+
+#alerta {
+    background-color: #DE5353;
+    color: white;
+    text-align: center;
+    padding: 5px;
+    border-radius: 3px;
 }
